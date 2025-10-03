@@ -37,11 +37,11 @@
               "raw": "{}"
             },
             "url": {
-              "raw": "http://localhost:8080/api/auth/init-admin",
+              "raw": "http://localhost:8080/auth/init-admin",
               "protocol": "http",
               "host": ["localhost"],
               "port": "8080",
-              "path": ["api", "auth", "init-admin"]
+              "path": ["auth", "init-admin"]
             },
             "description": "Crée le compte admin par défaut:\nEmail: admin@internship.com\nPassword: Admin@2024"
           }
@@ -81,11 +81,11 @@
               "raw": "{\n  \"email\": \"admin@internship.com\",\n  \"password\": \"Admin@2024\"\n}"
             },
             "url": {
-              "raw": "http://localhost:8080/api/auth/login",
+              "raw": "http://localhost:8080/auth/login",
               "protocol": "http",
               "host": ["localhost"],
               "port": "8080",
-              "path": ["api", "auth", "login"]
+              "path": ["auth", "login"]
             }
           }
         },
@@ -104,11 +104,11 @@
               "raw": "{\n  \"email\": \"stagiaire@example.com\"\n}"
             },
             "url": {
-              "raw": "http://localhost:8080/api/auth/check-email",
+              "raw": "http://localhost:8080/auth/check-email",
               "protocol": "http",
               "host": ["localhost"],
               "port": "8080",
-              "path": ["api", "auth", "check-email"]
+              "path": ["auth", "check-email"]
             }
           }
         },
@@ -141,11 +141,11 @@
               "raw": "{\n  \"email\": \"stagiaire@example.com\",\n  \"password\": \"Password123!\"\n}"
             },
             "url": {
-              "raw": "http://localhost:8080/api/auth/create-password",
+              "raw": "http://localhost:8080/auth/create-password",
               "protocol": "http",
               "host": ["localhost"],
               "port": "8080",
-              "path": ["api", "auth", "create-password"]
+              "path": ["auth", "create-password"]
             }
           }
         }
@@ -173,11 +173,11 @@
               "raw": "{\n  \"email\": \"admin2@internship.com\",\n  \"password\": \"Admin@2024\",\n  \"nom\": \"Martin\",\n  \"prenom\": \"Sophie\",\n  \"phone\": \"+212600000001\",\n  \"departement\": \"RH\"\n}"
             },
             "url": {
-              "raw": "http://localhost:8080/api/auth/register/admin",
+              "raw": "http://localhost:8080/auth/register/admin",
               "protocol": "http",
               "host": ["localhost"],
               "port": "8080",
-              "path": ["api", "auth", "register", "admin"]
+              "path": ["auth", "register", "admin"]
             }
           }
         },
@@ -214,11 +214,11 @@
               "raw": "{\n  \"email\": \"encadreur@example.com\",\n  \"nom\": \"Dupont\",\n  \"prenom\": \"Jean\",\n  \"phone\": \"+212600000002\",\n  \"departement\": \"IT\",\n  \"specialization\": \"Développement Web\"\n}"
             },
             "url": {
-              "raw": "http://localhost:8080/api/auth/register/encadreur",
+              "raw": "http://localhost:8080/auth/register/encadreur",
               "protocol": "http",
               "host": ["localhost"],
               "port": "8080",
-              "path": ["api", "auth", "register", "encadreur"]
+              "path": ["auth", "register", "encadreur"]
             }
           }
         },
@@ -255,11 +255,11 @@
               "raw": "{\n  \"email\": \"stagiaire@example.com\",\n  \"nom\": \"Bernard\",\n  \"prenom\": \"Marie\",\n  \"phone\": \"+212600000003\",\n  \"departement\": \"IT\",\n  \"school\": \"ENSIAS\",\n  \"major\": \"Génie Informatique\",\n  \"startDate\": \"2025-01-15\",\n  \"endDate\": \"2025-06-15\",\n  \"encadreurId\": null\n}"
             },
             "url": {
-              "raw": "http://localhost:8080/api/auth/register/stagiaire",
+              "raw": "http://localhost:8080/auth/register/stagiaire",
               "protocol": "http",
               "host": ["localhost"],
               "port": "8080",
-              "path": ["api", "auth", "register", "stagiaire"]
+              "path": ["auth", "register", "stagiaire"]
             }
           }
         }
@@ -279,11 +279,11 @@
               }
             ],
             "url": {
-              "raw": "http://localhost:8080/api/dashboard/metrics",
+              "raw": "http://localhost:8080/dashboard/metrics",
               "protocol": "http",
               "host": ["localhost"],
               "port": "8080",
-              "path": ["api", "dashboard", "metrics"]
+              "path": ["dashboard", "metrics"]
             }
           }
         }
@@ -303,11 +303,11 @@
               }
             ],
             "url": {
-              "raw": "http://localhost:8080/api/encadreurs",
+              "raw": "http://localhost:8080/encadreurs",
               "protocol": "http",
               "host": ["localhost"],
               "port": "8080",
-              "path": ["api", "encadreurs"]
+              "path": ["encadreurs"]
             }
           }
         },
@@ -322,11 +322,11 @@
               }
             ],
             "url": {
-              "raw": "http://localhost:8080/api/encadreurs/{{encadreurId}}",
+              "raw": "http://localhost:8080/encadreurs/{{encadreurId}}",
               "protocol": "http",
               "host": ["localhost"],
               "port": "8080",
-              "path": ["api", "encadreurs", "{{encadreurId}}"]
+              "path": ["encadreurs", "{{encadreurId}}"]
             }
           }
         },
@@ -349,11 +349,11 @@
               "raw": "{\n  \"nom\": \"Dupont Updated\",\n  \"prenom\": \"Jean\",\n  \"phone\": \"+212600000002\",\n  \"department\": \"IT\",\n  \"specialization\": \"Full Stack Development\"\n}"
             },
             "url": {
-              "raw": "http://localhost:8080/api/encadreurs/{{encadreurId}}",
+              "raw": "http://localhost:8080/encadreurs/{{encadreurId}}",
               "protocol": "http",
               "host": ["localhost"],
               "port": "8080",
-              "path": ["api", "encadreurs", "{{encadreurId}}"]
+              "path": ["encadreurs", "{{encadreurId}}"]
             }
           }
         },
@@ -368,11 +368,11 @@
               }
             ],
             "url": {
-              "raw": "http://localhost:8080/api/encadreurs/{{encadreurId}}",
+              "raw": "http://localhost:8080/encadreurs/{{encadreurId}}",
               "protocol": "http",
               "host": ["localhost"],
               "port": "8080",
-              "path": ["api", "encadreurs", "{{encadreurId}}"]
+              "path": ["encadreurs", "{{encadreurId}}"]
             }
           }
         }
@@ -414,11 +414,11 @@
               "raw": "{\n  \"email\": \"nouveau.stagiaire@example.com\",\n  \"firstName\": \"Pierre\",\n  \"lastName\": \"Dubois\",\n  \"phone\": \"+212612345678\",\n  \"school\": \"Université Mohammed V\",\n  \"department\": \"Informatique\",\n  \"startDate\": \"2025-01-15\",\n  \"endDate\": \"2025-06-15\",\n  \"encadreurId\": null\n}"
             },
             "url": {
-              "raw": "http://localhost:8080/api/interns",
+              "raw": "http://localhost:8080/interns",
               "protocol": "http",
               "host": ["localhost"],
               "port": "8080",
-              "path": ["api", "interns"]
+              "path": ["interns"]
             }
           }
         },
@@ -433,11 +433,11 @@
               }
             ],
             "url": {
-              "raw": "http://localhost:8080/api/interns",
+              "raw": "http://localhost:8080/interns",
               "protocol": "http",
               "host": ["localhost"],
               "port": "8080",
-              "path": ["api", "interns"]
+              "path": ["interns"]
             }
           }
         },
@@ -452,11 +452,11 @@
               }
             ],
             "url": {
-              "raw": "http://localhost:8080/api/interns/{{internId}}",
+              "raw": "http://localhost:8080/interns/{{internId}}",
               "protocol": "http",
               "host": ["localhost"],
               "port": "8080",
-              "path": ["api", "interns", "{{internId}}"]
+              "path": ["interns", "{{internId}}"]
             }
           }
         },
@@ -479,11 +479,11 @@
               "raw": "{\n  \"status\": \"ACTIVE\",\n  \"encadreurId\": {{encadreurId}}\n}"
             },
             "url": {
-              "raw": "http://localhost:8080/api/interns/{{internId}}",
+              "raw": "http://localhost:8080/interns/{{internId}}",
               "protocol": "http",
               "host": ["localhost"],
               "port": "8080",
-              "path": ["api", "interns", "{{internId}}"]
+              "path": ["interns", "{{internId}}"]
             }
           }
         },
@@ -498,11 +498,11 @@
               }
             ],
             "url": {
-              "raw": "http://localhost:8080/api/interns/{{internId}}",
+              "raw": "http://localhost:8080/interns/{{internId}}",
               "protocol": "http",
               "host": ["localhost"],
               "port": "8080",
-              "path": ["api", "interns", "{{internId}}"]
+              "path": ["interns", "{{internId}}"]
             }
           }
         }
@@ -544,11 +544,11 @@
               "raw": "{\n  \"name\": \"Plateforme E-commerce\",\n  \"description\": \"Développement d'une plateforme e-commerce moderne\",\n  \"startDate\": \"2025-01-15\",\n  \"endDate\": \"2025-06-15\",\n  \"status\": \"IN_PROGRESS\",\n  \"internIds\": [],\n  \"encadreurId\": null\n}"
             },
             "url": {
-              "raw": "http://localhost:8080/api/projects",
+              "raw": "http://localhost:8080/projects",
               "protocol": "http",
               "host": ["localhost"],
               "port": "8080",
-              "path": ["api", "projects"]
+              "path": ["projects"]
             }
           }
         },
@@ -563,11 +563,11 @@
               }
             ],
             "url": {
-              "raw": "http://localhost:8080/api/projects",
+              "raw": "http://localhost:8080/projects",
               "protocol": "http",
               "host": ["localhost"],
               "port": "8080",
-              "path": ["api", "projects"]
+              "path": ["projects"]
             }
           }
         },
@@ -582,11 +582,11 @@
               }
             ],
             "url": {
-              "raw": "http://localhost:8080/api/projects/{{projectId}}",
+              "raw": "http://localhost:8080/projects/{{projectId}}",
               "protocol": "http",
               "host": ["localhost"],
               "port": "8080",
-              "path": ["api", "projects", "{{projectId}}"]
+              "path": ["projects", "{{projectId}}"]
             }
           }
         },
@@ -609,11 +609,11 @@
               "raw": "{\n  \"name\": \"Plateforme E-commerce V2\",\n  \"description\": \"Développement d'une plateforme e-commerce moderne avec React\",\n  \"status\": \"IN_PROGRESS\"\n}"
             },
             "url": {
-              "raw": "http://localhost:8080/api/projects/{{projectId}}",
+              "raw": "http://localhost:8080/projects/{{projectId}}",
               "protocol": "http",
               "host": ["localhost"],
               "port": "8080",
-              "path": ["api", "projects", "{{projectId}}"]
+              "path": ["projects", "{{projectId}}"]
             }
           }
         },
@@ -628,11 +628,11 @@
               }
             ],
             "url": {
-              "raw": "http://localhost:8080/api/projects/{{projectId}}",
+              "raw": "http://localhost:8080/projects/{{projectId}}",
               "protocol": "http",
               "host": ["localhost"],
               "port": "8080",
-              "path": ["api", "projects", "{{projectId}}"]
+              "path": ["projects", "{{projectId}}"]
             }
           }
         }
@@ -674,11 +674,11 @@
               "raw": "{\n  \"title\": \"Configuration de l'environnement\",\n  \"description\": \"Installer et configurer l'environnement de développement\",\n  \"status\": \"TODO\",\n  \"priority\": \"HIGH\",\n  \"dueDate\": \"2025-01-20\",\n  \"projectId\": null,\n  \"assignedToId\": null\n}"
             },
             "url": {
-              "raw": "http://localhost:8080/api/tasks",
+              "raw": "http://localhost:8080/tasks",
               "protocol": "http",
               "host": ["localhost"],
               "port": "8080",
-              "path": ["api", "tasks"]
+              "path": ["tasks"]
             }
           }
         },
@@ -693,11 +693,11 @@
               }
             ],
             "url": {
-              "raw": "http://localhost:8080/api/tasks",
+              "raw": "http://localhost:8080/tasks",
               "protocol": "http",
               "host": ["localhost"],
               "port": "8080",
-              "path": ["api", "tasks"]
+              "path": ["tasks"]
             }
           }
         },
@@ -712,11 +712,11 @@
               }
             ],
             "url": {
-              "raw": "http://localhost:8080/api/tasks/{{taskId}}",
+              "raw": "http://localhost:8080/tasks/{{taskId}}",
               "protocol": "http",
               "host": ["localhost"],
               "port": "8080",
-              "path": ["api", "tasks", "{{taskId}}"]
+              "path": ["tasks", "{{taskId}}"]
             }
           }
         },
@@ -739,11 +739,11 @@
               "raw": "{\n  \"status\": \"IN_PROGRESS\",\n  \"priority\": \"HIGH\"\n}"
             },
             "url": {
-              "raw": "http://localhost:8080/api/tasks/{{taskId}}",
+              "raw": "http://localhost:8080/tasks/{{taskId}}",
               "protocol": "http",
               "host": ["localhost"],
               "port": "8080",
-              "path": ["api", "tasks", "{{taskId}}"]
+              "path": ["tasks", "{{taskId}}"]
             }
           }
         },
@@ -758,11 +758,11 @@
               }
             ],
             "url": {
-              "raw": "http://localhost:8080/api/tasks/{{taskId}}",
+              "raw": "http://localhost:8080/tasks/{{taskId}}",
               "protocol": "http",
               "host": ["localhost"],
               "port": "8080",
-              "path": ["api", "tasks", "{{taskId}}"]
+              "path": ["tasks", "{{taskId}}"]
             }
           }
         }
