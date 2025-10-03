@@ -191,4 +191,28 @@ public class AuthService {
         internRepository.save(intern);
         return UserDTO.fromEntity(user);
     }
+
+    @Transactional
+    public UserDTO initializeDefaultAdmin() {
+        String defaultEmail = "admin@internship.com";
+        String defaultPassword = "Admin@2024";
+
+        if (userRepository.existsByEmail(defaultEmail)) {
+            throw new RuntimeException("Le compte admin par défaut existe déjà");
+        }
+
+        User user = User.builder()
+                .email(defaultEmail)
+                .password(passwordEncoder.encode(defaultPassword))
+                .nom("Admin")
+                .prenom("System")
+                .phone("+212600000000")
+                .department("IT")
+                .role(User.Role.ADMIN)
+                .accountStatus(User.AccountStatus.ACTIVE)
+                .build();
+
+        user = userRepository.save(user);
+        return UserDTO.fromEntity(user);
+    }
 }

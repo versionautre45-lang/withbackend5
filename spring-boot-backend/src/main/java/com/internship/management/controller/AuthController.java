@@ -35,12 +35,22 @@ public class AuthController {
     }
 
     @PostMapping("/register/admin")
-    public ResponseEntity<UserDTO> createAdmin(@RequestBody AuthDTO.CreateAdminRequest request) {
+    public ResponseEntity<?> createAdmin(@RequestBody AuthDTO.CreateAdminRequest request) {
         try {
             UserDTO user = authService.createAdmin(request);
             return ResponseEntity.status(HttpStatus.CREATED).body(user);
         } catch (RuntimeException e) {
-            return ResponseEntity.badRequest().build();
+            return ResponseEntity.badRequest().body("{\"error\": \"" + e.getMessage() + "\"}");
+        }
+    }
+
+    @PostMapping("/init-admin")
+    public ResponseEntity<?> initializeAdmin() {
+        try {
+            UserDTO user = authService.initializeDefaultAdmin();
+            return ResponseEntity.status(HttpStatus.CREATED).body(user);
+        } catch (RuntimeException e) {
+            return ResponseEntity.badRequest().body("{\"error\": \"" + e.getMessage() + "\"}");
         }
     }
 

@@ -219,14 +219,37 @@ Authorization: Bearer {token}
 - Mots de passe hashés avec BCrypt
 - Protection CSRF désactivée (API REST)
 - CORS configuré pour accepter toutes les origines (à modifier en production)
-- Endpoints publics : `/api/auth/**`
+- Endpoints publics : `/api/auth/**` et `/api/init-admin`
 - Endpoints protégés : nécessitent un token JWT valide
 
-## Données de Test
+**Note:** Le mapping est `/api/auth/**` et non `/auth/**`. Assurez-vous d'utiliser le bon préfixe pour éviter les erreurs 403 Forbidden.
+
+## Initialisation du Système
+
+### Créer le compte Admin par défaut
+
+**IMPORTANT:** Avant toute utilisation, créez le compte admin par défaut :
+
+```http
+POST /api/auth/init-admin
+Content-Type: application/json
+
+{}
+```
+
+**Credentials créés:**
+- Email : `admin@internship.com`
+- Mot de passe : `Admin@2024`
+- Rôle : ADMIN
+- Status : ACTIVE
+
+Ce compte vous permettra de créer d'autres administrateurs, encadreurs et stagiaires.
+
+### Données de Test
 
 Le script `database/schema.sql` crée automatiquement :
 
-1. **Admin**
+1. **Admin** (alternative)
    - Email : `admin@example.com`
    - Mot de passe : `password123`
    - Rôle : ADMIN
